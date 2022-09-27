@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+<meta name="description" content="LiFi—A New and Emerging Technology">
+<meta name="keywords" content="LiFi, WiFi, internet, Hass, LED, pureLiFi">
+<meta name="author" content="Yannick Hott">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../Header_and_Footer_Media/WiFi-LiFi.jpeg">
+<link href="../About_the_technology/about_the_technology.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--<link href="https://fonts.googleapis.com/css2?family=Dosis&&family=Dangrek&display=swap" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css2?family=Dangrek&family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<!--<script src="../About_the_technology/about_the_technology.js" type="module" defer></script>-->
+</head>
+
+<body>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+   <div class="scroll-tracker"></div> 
+            <script>
+            AOS.init()
+        </script>
+<header class="total-header">
+        <script>
+        </script>
+      <a class="site-logo"> 
+          <img class="img-logo" src="../Header_and_Footer_Media/WiFi-LiFi-White.png" alt="Logo" data-aos="fade-right">
+      </a>
+        <nav class="site-nav" data-aos="fade-left">
+          <ul>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="../index.html">HOME</a></li>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="../About_the_technology/about_the_technology.html">ABOUT</a></li>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="../About_the_developer/about_the_developer.html">DEVELOPERS</a></li>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="../Issues_and_impacts/Issues_and_impacts.html">EFFECTS</a></li>
+          </ul>
+        </nav>
+        <div class="HeaderBackground"></div>
+    </header>
+    <main>
+            <!-- Hero -->
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="target" data-aos="fade-right" data-aos-delay="200">About</h1>
+                    <h1 class="target right" data-aos="fade-left" data-aos-delay="200">Tech</h1>
+                    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<!--
+                     <script>
+                !(function (t) {
+                    const e = (t) => new Promise((e) => setTimeout(e, t))
+                    t.fn.typeWrite = function (s) {
+                        var r = t.extend(
+                            { speed: 50, repeat: !1, cursor: !0, color: 'black', interval: 1e3 },
+                            s
+                        )
+                        let i = 100 - r.speed
+                        return new Promise((s, a) => {
+                            this.each(async function () {
+                                var a = t(this).text()
+                                ;(letters = a.split('')),
+                                    t(this).text(''),
+                                    t(this).css('color', r.color),
+                                    t(this).css('margin', '0px')
+                                for (var n = letters[0]; 1 == r.repeat; ) {
+                                  for (let s = 0; s < letters.length; s++)
+                                    1 == r.cursor
+                                      ? void 0 !== letters[s + 1]
+                                        ? (t(this).text(n),
+                                          t('#cursor').remove(),
+                                          t(this).append("<span id='cursor'>︳</span>"),
+                                          t('#cursor').css('animation', 'blink 1s infinite'),
+                                          (n += letters[s + 1]),
+                                          await e(i))
+                                        : (t(this).text(n),
+                                          t('#cursor').remove(),
+                                          t(this).append("<span id='cursor'>︳</span>"),
+                                          (n += letters[s]),
+                                          await e(r.interval))
+                                      : void 0 !== letters[s + 1]
+                                      ? (t(this).text(n), (n += letters[s + 1]), await e(i))
+                                      : (t(this).text(n), (n += letters[s]), await e(r.interval))
+                                  console.log('Clearing text'), t(this).text(''), (n = letters[0])
+                                }
+                                for (let s = 0; s < letters.length; s++)
+                                  1 == r.cursor
+                                    ? void 0 !== letters[s + 1]
+                                      ? (t(this).text(n),
+                                        t('#cursor').remove(),
+                                        t(this).append("<span id='cursor'>︳</span>"),
+                                        t('#cursor').css('animation', 'blink 1s infinite'),
+                                        (n += letters[s + 1]),
+                                        await e(i))
+                                      : (t(this).text(n),
+                                        t('#cursor').remove(),
+                                        t(this).append("<span id='cursor'>︳</span>"),
+                                        (n += letters[s]),
+                                        await e(i))
+                                    : void 0 !== letters[s + 1]
+                                    ? (t(this).text(n), (n += letters[s + 1]), await e(i))
+                                    : (t(this).text(n), (n += letters[s]), await e(i))
+                                s('Done')
+                              })
+                            })
+                          }
+                        })(jQuery)
+            </script>
+-->
+                    <script>
+                        var hovers = false;
+                        let colourChange = "false";
+                        function fadeInEffect() {
+                            console.log("Hi")
+                            var fadeInTarget = document.getElementsByClassName("target");
+                            var fadeInEffect = setInterval(function () {
+                               
+                                if (fadeInTarget.style.opacity) {
+                                    fadeInTarget.style.opacity = 0;
+                                }
+                                if (fadeInTarget.style.opacity < 1) {
+                                    (fadeInTarget.style.opacity += 1) / 100;
+                                    console.log(fadeInTarget.style.opacity);
+                                } if (fadeInTarget.style.opacity = 1) {
+                                    if (fadeInTarget.style.opacity = 1) {
+                                        console.log("DONE");
+                                        clearInterval(fadeInEffect);
+                                        fadeInEffect.disabled = true;
+                                    }
+                                    else {
+                                        console.log("Cancelled");
+                                    }
+                                }
+                            }, 3);
+                      }
+                        
+                        function invisible(){
+                            console.log("Invisble activated")
+                            document.getElementsByClassName("target").style.opacity = "0";
+                            clearInterval(invisible);
+                            console.log("Invisible deacyivayed")
+                        }
+                        
+                        
+                        function fadeOutEffect() {
+                        console.log("Fade out Activated");
+                        var fadeTarget = document.getElementsByClassName("target");
+                        var fadeEffect = setInterval(function () {
+                            if (!fadeTarget.style.opacity) {
+                                fadeTarget.style.opacity = 1;
+                            }
+                            if (fadeTarget.style.opacity > 0) {
+                                fadeTarget.style.opacity -= 0.01;
+                                console.log("Reducing");
+                            } else {
+                                clearInterval(fadeEffect);
+                            }
+                        }, 2);
+                        }
+                        
+                        $(document).ready(function(){
+                            $(window).scroll(function(){
+                                var scroll = $(window).scrollTop();
+                                var header = document.getElementsByName("HeaderBackground");
+
+                                if (scroll > 1 & scroll < 645) {
+                                    console.log(scroll);
+                                    console.log(hovers)
+                                    $(".HeaderBackground").css("opacity" , "1");
+                                    $(".HeaderBackground").css("color" , "white");
+                                    $(".site-nav ul li a").css("color" , "black");
+                                    $(".site-nav ul li a").css("color" , "black");
+//                                    if (hovers != true) {
+//                                        $(".site-nav ul li a").css("color" , "black");
+//                                        console.log("black");
+//                                    }
+//                                    else {
+//                                        $(".site-nav ul li a").css("color" , "aqua");
+//                                    }
+
+//                                    $(".site-nav ul li a").attr("color" , "black");
+                                    $(".img-logo").attr("src","../Header_and_Footer_Media/WiFi-LiFi.png");
+                                    $("header").css("opacity" , "1");
+                                    console.log("succes");
+                                    $(document).ready(function(){
+                                        $("header").fadeIn("fast");
+                                        });
+//                                    if (hovers = true) {
+//                                        console.log("hovers false");
+//                                        $(".site-nav ul li a").css("color" , "white");
+//
+//                                    }
+//                                    if (hovers = false) {
+//                                        $(".site-nav ul li a").css("color" , "aqua");
+//                                        console.log("hovers not false");
+//                                    }
+                                    }
+                                
+                                if (scroll > 645) {
+//                                    header.style.opacity = "0";
+//                                    $("header").fadeOut(1000);
+                                    $(document).ready(function(){
+                                        $("header").fadeOut("fast");
+                                        });
+//                                    $("header").css("opacity" , "0");
+
+                                    console.log("invisible");
+                                }
+
+//                                else if (scroll < 645) {
+//                                    $(".total-header").css("opacity" , "1");
+//                                    console.log("visible");
+//                                }
+//                                
+//                                if (scroll >= 95) {
+//                                    console.log("Greater than 95");
+//                                    $(".intro-text").typeWrite({
+//                                        speed: 300,
+//                                        cursor: false,
+////                    fontFamily: 'Dosis', sans-serif;
+//
+////                    font: Dosis,
+//                    // options here
+//                                    });
+//                                    console.log("typewriting complete?");
+////                $(".intro-text").css("color" , "blue");
+//                                    $(".intro-text").css("fontSize" , "2.5em");
+//                                    $(".intro-text").css("fontFamily" , "'Dosis', sans-serif");
+//                                }
+                                
+                                else if (scroll <= 1) {
+                                    $(".HeaderBackground").css("opacity" , "0");
+                                    $(".img-logo").attr("src","../Header_and_Footer_Media/WiFi-LiFi-White.png");
+                                    $(".site-nav ul li a").css("color" , "");
+//                                    if (hovers = true) {
+//                                        $(".site-nav ul li a").css("color" , "white");
+//                                    }
+                                    
+                                    
+
+                                    console.log("failure");
+                                }
+                              
+                            })
+})
+//                                hovers = "false";
+//                                function hover(x) {
+//                                    console.log("hoverf true");
+//                                    hovers = "true";
+//                                    console.log(hover)
+//                                    $("x").css("color" , "aqua");
+//                                    if (scroll > 1 & scroll < 645) {
+//                                        if (hovers = "false") {
+//                                        $(".site-nav ul li a").css("color" , "black");
+//                                        console.log("black");
+//                                        }
+//                                        else {
+//                                            $(".site-nav ul li a").css("color" , "aqua");
+//                                        }
+//                                    }
+//                                }
+
+//                                function unhover(x) {
+//                                    console.log("unhovered");
+//                                    hovers = false;
+//                                    console.log(hovers)
+//                                    if (scroll > 1 & scroll < 645) {
+//                                        $(x).css("color" , "black");
+//                                }
+//                                    else if (scroll <= 1) { 
+//                                        $(x).css("color" , "white");
+//                                }
+//                                }
+//                            
+//                                if (hovers = true) {
+//                                    $("x").css("color" , "black");
+//                                }
+//                                else if (hovers = false) {
+//                                    $("x").css("color" , "aqua");
+//                                }
+                            
+//                                    $(".img-logo").src='Index_media/WiFi-LiFi.png'
+//                                                            $(".img-logo").src='Index_media/WiFi-LiFi-White'
+//                        function colour() {
+//                            console.log("Colour Activated");
+//                            var colourTarget = document.getElementsByClassName("colourTarget");
+//                            var colourEffect = setInterval(function (){
+//                                var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+//                                console.log(scrollTop);
+//                                if (scrollTop >= 725){
+//                                    console.log("Succesful");
+//                                    var colourChange = "true";
+//                                    const elements = document.getElementsByClassName("colourTarget");
+//                                    for (const element of elements) {
+//                                        element.style.color = ('Black');
+//                                        console.log("Colour changed?");
+//                                    
+//                                }
+//                                }
+//                                else {
+//                                    console.log("Original")
+//                                    const elementes = document.getElementsByClassName("colourTarget");
+//                                    for (const elemente of elementes) {
+////                                        elemente.style.color = 'white';
+////                                        console.log("Colour changed?");
+////                                }
+////                                    
+////                                }
+//
+//                            }, 2);
+//                        }
+//
+//
+                        
+//                        var selector = document.getElementsByClassName("colourTarget");
+//                        var hovered = $(".colourTarget").find(".colourTarget:hover").length; 
+//                        console.log(this);
+//                        var hovered = false;
+//                        
+//                        if (hovered = true) {
+//                            $(".site-nav ul li a").css("color" , "aqua");
+//                            console.log("aqua");
+//                        }
+//                        else {
+//                            $(".site-nav ul li a").css("color" , "white");
+//                            console.log("white");
+//                        }
+//
+//                        
+//                        $(document).ready(function(){
+//                            $(document).mousemove(function(){
+//                                 if($("colourTarget:hover").length != 0){
+//                                    console.log("preaqua");
+//                                     $(".site-nav ul li a").css("color" , "aqua");
+//                                    console.log("aqua");
+//                                } else{
+//                                    $(".site-nav ul li a").css("color" , "white");
+//                                }
+//                            });
+//                        });
+//                   
+                        function startingEffect() {
+                            document.getElementsByClassName("target").style.opacity = "0";
+                            console.log('sadness');
+                      }
+                        startingEffect()
+                   
+//                        document.getElementById("target").addEventListener('click', fadeOutEffect)
+                        setTimeout(invisible, 1)
+                        setTimeout(fadeInEffect, 1240)
+                        
+//                        setTimeout(colour, 10)
+                        
+                        setTimeout(fadeOutEffect, 7500)
+                        
+                        
+//133,780                    
+                    </script>
+                </div>
+                <div class="video">
+                    <img id="vid" src="../About_the_technology/About_the_technology_media/Aquamarine-LiFi-Background-Updated.png" alt="">
+                    <img id="img" src="About_the_technology_media/GradientFade.png" alt="">
+                </div>
+                
+            </div>
+        <div class="intro">
+<!--
+            <script>
+                !(function (t) {
+                    const e = (t) => new Promise((e) => setTimeout(e, t))
+                    t.fn.typeWrite = function (s) {
+                        var r = t.extend(
+                            { speed: 50, repeat: !1, cursor: !0, color: 'black', interval: 1e3 },
+                            s
+                        )
+                        let i = 100 - r.speed
+                        return new Promise((s, a) => {
+                            this.each(async function () {
+                                var a = t(this).text()
+                                ;(letters = a.split('')),
+                                    t(this).text(''),
+                                    t(this).css('color', r.color),
+                                    t(this).css('margin', '0px')
+                                for (var n = letters[0]; 1 == r.repeat; ) {
+                                  for (let s = 0; s < letters.length; s++)
+                                    1 == r.cursor
+                                      ? void 0 !== letters[s + 1]
+                                        ? (t(this).text(n),
+                                          t('#cursor').remove(),
+                                          t(this).append("<span id='cursor'>︳</span>"),
+                                          t('#cursor').css('animation', 'blink 1s infinite'),
+                                          (n += letters[s + 1]),
+                                          await e(i))
+                                        : (t(this).text(n),
+                                          t('#cursor').remove(),
+                                          t(this).append("<span id='cursor'>︳</span>"),
+                                          (n += letters[s]),
+                                          await e(r.interval))
+                                      : void 0 !== letters[s + 1]
+                                      ? (t(this).text(n), (n += letters[s + 1]), await e(i))
+                                      : (t(this).text(n), (n += letters[s]), await e(r.interval))
+                                  console.log('Clearing text'), t(this).text(''), (n = letters[0])
+                                }
+                                for (let s = 0; s < letters.length; s++)
+                                  1 == r.cursor
+                                    ? void 0 !== letters[s + 1]
+                                      ? (t(this).text(n),
+                                        t('#cursor').remove(),
+                                        t(this).append("<span id='cursor'>︳</span>"),
+                                        t('#cursor').css('animation', 'blink 1s infinite'),
+                                        (n += letters[s + 1]),
+                                        await e(i))
+                                      : (t(this).text(n),
+                                        t('#cursor').remove(),
+                                        t(this).append("<span id='cursor'>︳</span>"),
+                                        (n += letters[s]),
+                                        await e(i))
+                                    : void 0 !== letters[s + 1]
+                                    ? (t(this).text(n), (n += letters[s + 1]), await e(i))
+                                    : (t(this).text(n), (n += letters[s]), await e(i))
+                                s('Done')
+                              })
+                            })
+                          }
+                        })(jQuery)
+            </script>
+-->
+            <div class="intro-text">
+                <p class="testers" data-aos="zoom-in-up">LiFi is a wireless communication technology similar to WiFi in purpose, but highly contrasting in its method, and effects. Like WiFi, LiFi transmits data to the user, allowing them to access the internet. LiFi serves many purposes, such as providing connections to the internet. LiFi’s purposes differ from WiFi’s in speed and connectivity. LiFi is significantly faster, and causes less problems for both the user and the provider.</p>
+            </div>
+<!--
+            <script src="https://unpkg.com/typeit">
+                $('.testers').typeIt({
+                        whatToType: "LiFi is a wireless communication technology similar to WiFi in purpose, but highly contrasting in its method, and effects. Like WiFi, LiFi transmits data to the user, allowing them to access the internet. LiFi serves many purposes, such as providing connections to the internet. LiFi’s purposes differ from WiFi’s in speed and connectivity. LiFi is significantly faster, and causes less problems for both the user and the provider.",
+                        
+                        cursor: true,
+
+                  // cursor character
+                        cursorChar: "|",
+
+                  // bink speed
+                        cursorSpeed: 1000,
+
+                  // delete speed
+                        deleteSpeed: null,
+
+                  // Choose whether you want multiple strings to be printed on top of each other
+                        breakLines: true,
+
+                  // The amount of time between typing multiple strings.
+                        breakDelay: 750,
+
+                  // Typing speed
+                        speed: 200,
+
+                  // The amount of time before the plugin begins typing after initalizing.
+                        startDelay: 250,
+
+                  // Whether to begin instance by deleting strings inside element, and then typing what strings are defined via JSON or companion functions. 
+                        startDelete: false,
+
+                  // The amount of time (in milliseconds) between typing multiple strings.
+                        nextStringDelay: 750,
+
+                  // Have your string or strings continuously loop after completing.
+                          loop: false,
+
+                          // The amount of time between looping over a string or set of strings again.  
+                          loopDelay: 750,
+
+                          // Handle strings as HTML, which will process tags and HTML entities
+                          html: true,
+
+                          // Make the typing pace irregular, as if a real person is doing it
+                          lifeLike: true,
+
+                          // Determines if the instance will begin typing automatically on .go(), or only when the target element becomes visible in the viewport. 
+                          waitUntilVisible: false,
+                        
+            });
+            </script>
+-->
+<!--
+            <script>
+                
+                
+//                new TypeIt('#textContainer',{
+//                    strings: "Your Content Here",
+//                });
+//                
+//                new TypeIt('#textContainer').go();
+//                
+//                new TypeIt('#textContainer',{
+//
+//                  // what to type
+//                  strings: 'LiFi is a wireless communication technology similar to WiFi in purpose, but highly contrasting in its method, and effects. Like WiFi, LiFi transmits data to the user, allowing them to access the internet. LiFi serves many purposes, such as providing connections to the internet. LiFi’s purposes differ from WiFi’s in speed and connectivity. LiFi is significantly faster, and causes less problems for both the user and the provider.',
+//
+//                  // shows cursor
+//                  cursor: true,
+//
+//                  // cursor character
+//                  cursorChar: "|",
+//
+//                  // bink speed
+//                  cursorSpeed: 1000,
+//
+//                  // delete speed
+//                  deleteSpeed: null,
+//
+//                  // Choose whether you want multiple strings to be printed on top of each other
+//                  breakLines: true,
+//
+//                  // The amount of time between typing multiple strings.
+//                  breakDelay: 750,
+//
+//                  // Typing speed
+//                  speed: 200,
+//
+//                  // The amount of time before the plugin begins typing after initalizing.
+//                  startDelay: 250,
+//
+//                  // Whether to begin instance by deleting strings inside element, and then typing what strings are defined via JSON or companion functions. 
+//                  startDelete: false,
+//
+//                  // The amount of time (in milliseconds) between typing multiple strings.
+//                  nextStringDelay: 750,
+//
+//                  // Have your string or strings continuously loop after completing.
+//                  loop: false,
+//
+//                  // The amount of time between looping over a string or set of strings again.  
+//                  loopDelay: 750,
+//
+//                  // Handle strings as HTML, which will process tags and HTML entities
+//                  html: true,
+//
+//                  // Make the typing pace irregular, as if a real person is doing it
+//                  lifeLike: true,
+//
+//                  // Determines if the instance will begin typing automatically on .go(), or only when the target element becomes visible in the viewport. 
+//                  waitUntilVisible: true,
+//
+//                });
+            </script>
+-->
+<!--
+            <script>                
+                var animationTarget = document.getElementsByClassName("intro-text");
+
+                let animationAnswers = animationTarget.getbou
+                getBoundingClientRect();
+                console.log(animationTarget)
+                $('.fade-in').animateVisible();
+
+                $(".intro-text").typeWrite({
+                    speed: 300,
+                    cursor: false,
+//                    fontFamily: 'Dosis', sans-serif;
+
+//                    font: Dosis,
+                    // options here
+                });
+                
+//                $(".intro-text").css("color" , "blue");
+                $(".intro-text").css("fontSize" , "2.5em");
+                $(".intro-text").css("fontFamily" , "'Dosis', sans-serif");
+
+////                $(window).scroll(function (){ 
+////                    let scroll = $(window).scrollTop();
+////                    let scroll = $(window).scrollTop();
+////                    if(scroll >= 350) {
+////       /* insert what happens after scroll bigger than 350px */
+////    } else {
+////       /* insert what happens when the user scrolls back to less than 350px */
+////    }
+//                }
+                var firstScroll = true;
+                $('div').bind('inview', function (event, visible) {
+                    console.log(visible);
+                    if (visible == true) {
+                        if (firstScroll = true) {
+                                                        console.log("writing");
+
+                            $(".intro-text").typeWrite({
+                                speed: 300,
+                                cursor: false,
+            //                    fontFamily: 'Dosis', sans-serif;
+
+            //                    font: Dosis,
+                                // options here
+                            });
+//                            firstScroll = false;
+                            console.log("writing");
+                        }
+                    }
+        // element is now visible in the viewport
+                     else {
+        // element has gone out of viewport
+                    }   
+                });
+
+//                
+//                $(document).ready(function(){
+//                    $(window).scroll(function(){
+//                        var scroll = $(window).scrollTop();
+//                                console.log(scroll)
+//                                console.log("Detection begun");
+//                                
+//                        if (scroll >= 95) {
+//                                    console.log("scroll good")
+//                                    $(".intro-text").typeWrite({
+//                                        speed: 300,
+//                                        cursor: false,
+////                    fontFamily: 'Dosis', sans-serif;
+//
+////                    font: Dosis,
+//                    // options here
+//                                    });
+//                
+////                $(".intro-text").css("color" , "blue");
+//                                    $(".intro-text").css("fontSize" , "2.5em");
+//                                    $(".intro-text").css("fontFamily" , "'Dosis', sans-serif");
+//                                }
+//                                
+//                              
+//                            })
+//})
+            </script>
+-->
+        </div>
+        <div class="second">
+            <div class="second-text">
+                <img id="Photo1" src="../About_the_technology/About_the_technology_media/lifiAquamarine.png" alt="" data-aos="slide-left">
+                <p data-aos="zoom-in-down">“[LiFi has a] band frequency of 200,000 GHz, versus the maximum 5 GHz of the wifi, [which] is 100 times faster and can transmit much more information per second.”</p>
+            </div>
+        </div>
+        <iframe class="videoEmbed" width="1120" height="630" src="https://www.youtube.com/embed/FbDohcbuhu0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-aos="flip-down" data-aos-easing="ease-out" data-aos-duration="1500"></iframe>
+        <div class="third">
+            <div class="third-text" data-aos="flip-up" data-aos-duration="800">
+                <p>While WiFi uses the radio spectrum, which is limited to certain frequencies, LiFi transmits the data through light waves. This creates a much quicker, clearer and more accessible route of data, reducing latency. LiFi can be used anywhere where there is a light, as “any light fitting can easily be converted into an internet connection point.” </p>
+            </div>
+        </div>
+<!--        <div class="gap">f <br> f</div>-->
+        
+        <div class="fourth" data-aos="zoom-out">
+            <div class="fourth-text">
+                <h3>LiFi’s uses are widespread, such as:</h3>
+                <table id="uses">
+                    <tr id="smartDevices" data-aos="fade-up">
+                        <td class="tableName">Smart Devices</td>
+                        <td>The capabilities and speed of a wide variety of smart devices in the home, such as speakers, windows, doors and more will be enhanced by LiFi’s improved speed and reduced latency. Another incredible use of LiFi with smart devices is products such as robotic vacuum cleaners, which can use LiFi to both better map out environments, and also connect more quickly. Other uses include interactive venues such as museum exhibitions. </td> 
+                    </tr>
+                     <tr id="vehiclesAndTransportation" data-aos="fade-up">
+                        <td class="tableName">Vehicles and Transportation</td>
+                        <td>As the world transitions towards autonomous and semi-autonomous vehicles, the importance of interconnectivity in vehicles cannot be stressed enough. Firstly, an environment with vehicles autonomously driving requires complete awareness of surroundings. LiFi can be beneficial at transmitting this data between vehicles, through the headlights and indicators. The LiFi data can also assist with products such as Google and Apple Maps, or services which locate parking spots in a parking lot. The effects of LiFi in car headlights can compound with LiFi in Traffic Lights, allowing for more effective traffic management. </td> 
+                    </tr>
+                     <tr id="militaryAndSecurity" data-aos="fade-up">
+                        <td class="tableName">Military and Security</td>
+                        <td id="reasons"><i>Due to the nature of LiFi, it cannot pass through walls, or travel extremely long distances. This means that it is: </i><br>
+                        1. More secure (Can’t be accessed due to physical restraints) 
+                        <br>
+                        2. Nearly zero electromagnetic signature, which means it can’t detected by enemies
+                        <br>
+                        3. Unlicensed Spectrum—The light waves cannot be licensed by countries like radio waves currently are.
+                        <br>
+                        4. Unjammable signal
+                        </td> 
+                    </tr>
+                </table>
+<!--                <p>LiFi is a system which transmits data through illumination (LED bulbs). In the 1990's, it was discovered that LED's could transmit data, and Professor Harald Hass demonstrated this in a 2011 TEDGlobal talk in Edinburgh.</p>-->
+            </div>
+        </div>
+        <img class="carVisualisation" src="../About_the_technology/About_the_technology_media/LiFi_Car_Visualisation.jpeg" alt="" data-aos="fade" data-aos-duration="100">
+        <div class="fifth">
+            <div class="fifth-text">
+                <p data-aos="zoom-in">LiFi is currently extremely expensive for the consumer, due to a lack of integration into the market. LiFi installation in a home is estimated to cost $2,000. On their own, LiFi-enabled LED bulbs are only slightly more expensive, however devices don’t fully support the technology, raising the prices significantly. LiFi is sold through companies which offer both the hardware and the software. If LiFi is properly integrated into the used technology (devices) then LiFi technology can become a cheap, well-integrated and advanced technology.</p>
+            </div>
+        </div>
+        <h3 data-aos="slide-right">Hardware and Usage:</h3> 
+        <div class="sixth" data-aos="fade-left">
+             <div class="sixth-text">
+                <p>LiFi requires two main components—a photodiode and a light source. The photodiode is a “transceiver that receives light signals and transmits them back”. The light source (LEDs) transmits data by emitting light. </p>
+            </div>
+        </div>
+        <img class="carVisualisation" src="../About_the_technology/About_the_technology_media/Photodiode.jpg" alt="" data-aos="flip-down" data-aos-easing="ease-out" data-aos-duration="1500">
+        <div class="sixth2" data-aos="fade">
+             <div class="sixth-text2">
+                <p>LiFi is commercially available, however extremely expensive, and sometimes limited in use. It requires a connector to use, which is not ideal.</p>
+            </div>
+        </div>
+    </main>
+    <footer data-aos="zoom-out">
+        <div class="footer-content">
+            <h3>yannick hott</h3>
+            <p>Yannick Hott's Year 9 IST Website on LiFi, a new and emerging internet technology.</p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/PureLiFiTechnology/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/lifi_co?lang=en"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/lifitechnology/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCij11GqG_SVUXUkN11aOUCQ"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://au.linkedin.com/in/yannick-hott-ba28621ba"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+            
+            <ul class="socials2">
+                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=yhott2025@waverley.nsw.edu.au"><i class="fa fa-send"></i></a></li>
+                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=yhott2025@waverley.nsw.edu.au"><i>Contact the website owner for any queries or concerns.</i></a></li>
+            </ul>
+<!--            <a class="email" href="https://mail.google.com/mail/?view=cm&fs=1&to=yhott2025@waverley.nsw.edu.au">Contact</a><a class="email"> the website owner for any queries or concerns.</a>-->
+            
+<!--            <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>-->
+      </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 Yannick Hott. designed by <span>Yannick Hott</span> </p>
+        </div>
+    </footer>
+</body>
+</html>
