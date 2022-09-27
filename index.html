@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="description" content="LiFi—A New and Emerging Technology">
+<meta name="keywords" content="LiFi, WiFi, internet, Hass, LED, pureLiFi">
+<meta name="author" content="Yannick Hott">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Header_and_Footer_Media/WiFi-LiFi.jpeg">
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<!--<script src="app.js"></script>-->
+</head>
+<body>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+            <script>
+            AOS.init()
+        </script>
+    <header class="total-header">
+        <script>
+        </script>
+      <a class="site-logo" data-aos="fade-right"> 
+          <img class="img-logo" src="Header_and_Footer_Media/WiFi-LiFi-White.png" alt="Logo">
+      </a>
+        <nav class="site-nav" data-aos="fade-left">
+          <ul>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="index.html">HOME</a></li>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="About_the_technology/about_the_technology.html">ABOUT</a></li>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="About_the_developer/about_the_developer.html">DEVELOPERS</a></li>
+              <li class="colourTarget"><a onmouseover="hover(this)" onmouseout="unhover(this)" href="Issues_and_impacts/Issues_and_impacts.html">EFFECTS</a></li>
+          </ul>
+        </nav>
+        <div class="HeaderBackground"></div>
+    </header>
+    <main>
+            <!-- Hero -->
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 id="target">LiFi</h1>
+                    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+                    <script>
+                        var hovers = false;
+                        let colourChange = "false";
+                        function fadeInEffect() {
+                            console.log("Hi")
+                            var fadeInTarget = document.getElementById("target");
+                            var fadeInEffect = setInterval(function () {
+                               
+                                if (fadeInTarget.style.opacity) {
+                                    fadeInTarget.style.opacity = 0;
+                                }
+                                if (fadeInTarget.style.opacity < 1) {
+                                    (fadeInTarget.style.opacity += 1) / 100;
+                                    console.log(fadeInTarget.style.opacity);
+                                } if (fadeInTarget.style.opacity = 1) {
+                                    if (fadeInTarget.style.opacity = 1) {
+                                        console.log("DONE");
+                                        clearInterval(fadeInEffect);
+                                        fadeInEffect.disabled = true;
+                                    }
+                                    else {
+                                        console.log("Cancelled");
+                                    }
+                                }
+                            }, 3);
+                      }
+                        
+                        function invisible(){
+                            console.log("Invisble activated")
+                            document.getElementById("target").style.opacity = "0";
+                            clearInterval(invisible);
+                            console.log("Invisible deacyivayed")
+                        }
+                        
+                        
+                        function fadeOutEffect() {
+                        console.log("Fade out Activated");
+                        var fadeTarget = document.getElementById("target");
+                        var fadeEffect = setInterval(function () {
+                            if (!fadeTarget.style.opacity) {
+                                fadeTarget.style.opacity = 1;
+                            }
+                            if (fadeTarget.style.opacity > 0) {
+                                fadeTarget.style.opacity -= 0.01;
+                                console.log("Reducing");
+                            } else {
+                                clearInterval(fadeEffect);
+                            }
+                        }, 2);
+                        }
+                        
+                        $(document).ready(function(){
+                            $(window).scroll(function(){
+                                var scroll = $(window).scrollTop();
+                                var header = document.getElementsByName("HeaderBackground");
+
+                                if (scroll > 1 & scroll < 645) {
+                                    console.log(scroll);
+                                    console.log(hovers)
+                                    $(".HeaderBackground").css("opacity" , "1");
+                                    $(".HeaderBackground").css("color" , "white");
+                                    $(".site-nav ul li a").css("color" , "black");
+//                                    if (hovers != true) {
+//                                        $(".site-nav ul li a").css("color" , "black");
+//                                        console.log("black");
+//                                    }
+//                                    else {
+//                                        $(".site-nav ul li a").css("color" , "aqua");
+//                                    }
+
+//                                    $(".site-nav ul li a").attr("color" , "black");
+                                    $(".img-logo").attr("src","Header_and_Footer_Media/WiFi-LiFi.png");
+                                    $("header").css("opacity" , "1");
+                                    console.log("succes");
+                                    $(document).ready(function(){
+                                        $("header").fadeIn("fast");
+                                        });
+//                                    if (hovers = true) {
+//                                        console.log("hovers false");
+//                                        $(".site-nav ul li a").css("color" , "white");
+//
+//                                    }
+//                                    if (hovers = false) {
+//                                        $(".site-nav ul li a").css("color" , "aqua");
+//                                        console.log("hovers not false");
+//                                    }
+                                    }
+                                
+                                if (scroll > 645) {
+//                                    header.style.opacity = "0";
+//                                    $("header").fadeOut(1000);
+                                    $(document).ready(function(){
+                                        $("header").fadeOut("fast");
+                                        });
+//                                    $("header").css("opacity" , "0");
+
+                                    console.log("invisible");
+                                }
+
+//                                else if (scroll < 645) {
+//                                    $(".total-header").css("opacity" , "1");
+//                                    console.log("visible");
+//                                }
+                                
+                                else if (scroll <= 1) {
+                                    $(".HeaderBackground").css("opacity" , "0");
+                                    $(".img-logo").attr("src","Header_and_Footer_Media/WiFi-LiFi-White.png");
+                                    $(".site-nav ul li a").css("color" , "white");
+//                                    if (hovers = true) {
+//                                        $(".site-nav ul li a").css("color" , "white");
+//                                    }
+                                    
+                                    
+
+                                    console.log("failure");
+                                }
+                              
+                            })
+})
+//                                hovers = "false";
+//                                function hover(x) {
+//                                    console.log("hoverf true");
+//                                    hovers = "true";
+//                                    console.log(hover)
+//                                    $("x").css("color" , "aqua");
+//                                    if (scroll > 1 & scroll < 645) {
+//                                        if (hovers = "false") {
+//                                        $(".site-nav ul li a").css("color" , "black");
+//                                        console.log("black");
+//                                        }
+//                                        else {
+//                                            $(".site-nav ul li a").css("color" , "aqua");
+//                                        }
+//                                    }
+//                                }
+
+//                                function unhover(x) {
+//                                    console.log("unhovered");
+//                                    hovers = false;
+//                                    console.log(hovers)
+//                                    if (scroll > 1 & scroll < 645) {
+//                                        $(x).css("color" , "black");
+//                                }
+//                                    else if (scroll <= 1) { 
+//                                        $(x).css("color" , "white");
+//                                }
+//                                }
+//                            
+//                                if (hovers = true) {
+//                                    $("x").css("color" , "black");
+//                                }
+//                                else if (hovers = false) {
+//                                    $("x").css("color" , "aqua");
+//                                }
+                            
+//                                    $(".img-logo").src='Index_media/WiFi-LiFi.png'
+//                                                            $(".img-logo").src='Index_media/WiFi-LiFi-White'
+//                        function colour() {
+//                            console.log("Colour Activated");
+//                            var colourTarget = document.getElementsByClassName("colourTarget");
+//                            var colourEffect = setInterval(function (){
+//                                var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+//                                console.log(scrollTop);
+//                                if (scrollTop >= 725){
+//                                    console.log("Succesful");
+//                                    var colourChange = "true";
+//                                    const elements = document.getElementsByClassName("colourTarget");
+//                                    for (const element of elements) {
+//                                        element.style.color = ('Black');
+//                                        console.log("Colour changed?");
+//                                    
+//                                }
+//                                }
+//                                else {
+//                                    console.log("Original")
+//                                    const elementes = document.getElementsByClassName("colourTarget");
+//                                    for (const elemente of elementes) {
+////                                        elemente.style.color = 'white';
+////                                        console.log("Colour changed?");
+////                                }
+////                                    
+////                                }
+//
+//                            }, 2);
+//                        }
+//
+//
+                        
+//                        var selector = document.getElementsByClassName("colourTarget");
+//                        var hovered = $(".colourTarget").find(".colourTarget:hover").length; 
+//                        console.log(this);
+//                        var hovered = false;
+//                        
+//                        if (hovered = true) {
+//                            $(".site-nav ul li a").css("color" , "aqua");
+//                            console.log("aqua");
+//                        }
+//                        else {
+//                            $(".site-nav ul li a").css("color" , "white");
+//                            console.log("white");
+//                        }
+//
+//                        
+//                        $(document).ready(function(){
+//                            $(document).mousemove(function(){
+//                                 if($("colourTarget:hover").length != 0){
+//                                    console.log("preaqua");
+//                                     $(".site-nav ul li a").css("color" , "aqua");
+//                                    console.log("aqua");
+//                                } else{
+//                                    $(".site-nav ul li a").css("color" , "white");
+//                                }
+//                            });
+//                        });
+//                   
+                        function startingEffect() {
+                            document.getElementById("target").style.opacity = "0";
+                            console.log('sadness');
+                      }
+                        startingEffect()
+                   
+//                        document.getElementById("target").addEventListener('click', fadeOutEffect)
+                        setTimeout(invisible, 1)
+                        setTimeout(fadeInEffect, 1240)
+                        
+//                        setTimeout(colour, 10)
+                        
+                        setTimeout(fadeOutEffect, 7500)
+                        
+                        
+//133,780                    
+                    </script>
+                </div>
+                <div class="video">
+                    <video id="vid" src="Index_media/background_No_Watermark" muted loop autoplay></video>
+                    <img id="img" src="Index_media/GradientFade.png" alt="">
+                </div>
+                
+            </div>
+        <div class="intro">
+            <div class="introText" data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="600">
+                <p>Introducing LiFi, a revolutionary wireless communication technology that stands for 'Light Fidelity'. Unlike WiFi, which uses radio waves, LiFi utilises light waves to transmit internet data.</p>
+            </div>
+        </div>
+<!--
+        <script>
+            const boxes = document.querySelectorAll('.introText')
+            
+            window.addEventListener('scroll', checkBoxes)
+            
+            checkBoxes()
+           
+            function checkBoxes() {
+                const triggerBottom = window.innerHeight / 5 * 4 - 150
+                console.log(triggerBottom)
+                boxes.forEach(introText => {
+                    const boxTop = introText.getBoundingClientRect().top
+                    
+                    if(boxTop < triggerBottom){
+                        introText.classList.add('show')
+                        console.log("Show added")
+                    }  
+                    else {
+                        introText.classList.remove('show')
+                        console.log("show removed")
+                    }
+                })
+            }
+        </script>
+-->
+<!--
+        <script>
+            const text = document.querySelector('introText');
+            
+            const strText = text.textContent;
+            
+            const splitText = strText.split("");
+            
+            for(let i=0; i < splitText.length; i++){
+                text.innerHTML += "<span>" + splitText[i] + "</span>";
+            }
+        </script>
+-->
+        <script>
+            AOS.init()
+        </script>
+        <div class="second">
+            <div class="secondText">
+                <p data-aos="fade-right" data-aos-easing="ease-out">The purpose of this website is to explore LiFi, a new and emerging technology which could restructure the internet.</p>
+            </div>
+        </div>
+        <div class="third">
+            <div class="thirdText">
+                <img id="Photo" src="Index_media/Hott-Yannick.jpg" alt="Author's Face" data-aos="fade-right" data-aos-duration="600">
+                <p data-aos="slide-left" data-aos-duration="600">My Name is Yannick Hott. I am a Year 9 student at Waverley College. I have a firm interest in technological development, and LiFi is one area which I am passionate about. I study IST, a subject revolving around modern technology, and have been firmly invested in gaining more knowledge about the technological world.</p>
+            </div>
+        </div>
+<!--        <div class="gap">f <br> f</div>-->
+        <div class="fourth">
+            <div class="fourthText">
+                <img id="Photo1" src="Index_media/LiFi_Light_Bulb.png" alt="Light Bulb for LiFi" data-aos="slide-left" data-aos-duration="600">
+                <p data-aos="fade-right" data-aos-duration="600">LiFi is a system which transmits data through illumination (LED bulbs). In the 1990's, it was discovered that LED's could transmit data, and Professor Harald Hass demonstrated this in a 2011 TEDGlobal talk in Edinburgh.</p>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <h3>yannick hott</h3>
+            <p>Yannick Hott's Year 9 IST Website on LiFi — a new and emerging internet technology.</p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/PureLiFiTechnology/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/lifi_co?lang=en"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/lifitechnology/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCij11GqG_SVUXUkN11aOUCQ"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://au.linkedin.com/in/yannick-hott-ba28621ba"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+            
+            <ul class="socials2">
+                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=yhott2025@waverley.nsw.edu.au"><i class="fa fa-send"></i></a></li>
+                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=yhott2025@waverley.nsw.edu.au"><i>Contact the website owner for any queries or concerns.</i></a></li>
+            </ul>
+<!--            <a class="email" href="https://mail.google.com/mail/?view=cm&fs=1&to=yhott2025@waverley.nsw.edu.au">Contact</a><a class="email"> the website owner for any queries or concerns.</a>-->
+            
+<!--            <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>-->
+      </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 Yannick Hott. designed by <span>Yannick Hott</span> </p>
+        </div>
+    </footer>
+</body>
+</html>
